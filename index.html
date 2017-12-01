@@ -1,31 +1,39 @@
 <!-- donate-bitcoin Copyright (GPL) 2016  Nathan Robinson -->
+<!-- donate.kozjak.io Copyright (GPL) 2017  Mario Kozjak -->
 <DOCTYPE html>
   <head>
     <meta charset="UTF-8">
     <title>Donate!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
   </head>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.qrcode.min.js"></script>
 <script src="index.js"></script>
 <body onload="donate()">
-<center>
-<div id="donatemessage"></div>
-<div id="donation">
-  <br><input type="text" name="donatebox" id="donatebox" onchange="donate()" size="12">
-  <img style="cursor:pointer" id="donationbutton" height="20px" onclick="donate()" align="center" src="">
-</div>
-<div id="donatetext"></div>
-<br>
-<div id="qrcodePlaceHolder"></div>
-</center>
+  <center>
+    <div class="topbox">kozjak.io</div>
+    <div id="donatemessage"></div>
+    <div id="donation">
+      <br>
+      <input type="text" name="donatebox" id="donatebox" onchange="donate()" size="12">
+      <img style="cursor:pointer" id="donationbutton" height="20px" onclick="donate()" align="center" src="">
+    </div>
+    <div id="donatetext"></div>
+    <br>
+    <div id="qrcodePlaceHolder"></div>
+    <footer>
+      <a href="mailto:kozjakm1@gmail.com">Contact</a>
+      <a href="https://github.com/mkozjak">GitHub</a>
+      <a href="https://twitter.com/mkozjak1">Twitter</a>
+    </footer>
+  </center>
 
 <script>
-document.getElementById("donatemessage").innerHTML = "<br><h1>Donate funds</h1>";
+document.getElementById("donatemessage").innerHTML = "<h1>Donate!</h1>";
 
 if (!isNaN(parseFloat(params.amount))) {
   document.getElementById("donatebox").value = parseFloat(params.amount);
