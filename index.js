@@ -164,7 +164,7 @@ $(function() {
 
     // Change page title on blur
     $(window).blur(function() {
-        $("title").text("donate.kozjak.io");
+        $("title").text("mario.kozjak.io/donate");
     });
 
    	// Change page title back on focus
